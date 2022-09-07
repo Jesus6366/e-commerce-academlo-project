@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus' E-commerce</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav__logo-icon">
+                    <title>Academlo Logo</title>
+                    <g>
+                        <g>
+                            <path
+                                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                STORE
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+            <div class="nav__btns">
+                <!-- color theme button -->
+
+                <i class="bx bx-moon change-theme" id="theme-button"></i>
+
+
+                <div class="nav__shop" id="cart-shop">
+                    <i class="bx bx-shopping-bag"></i>
+                    <span id="cart-count" class="count">0</span>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart-close"></i>
+        <h2 class="cart__title-center"> My Cart</h2>
+        <div class="cart__container">
+            <div class="cart__empty">
+                <img src="https://i.imgur.com/v5g7RMn.png" alt="empty cart">
+                <h2>Your cart is empty</h2>
+                <p>You can add items to your cart by clicking on the "<i class="bx bx-plus"></i>" button on the product
+                    page.</p>
+
+            </div>
+
+            <article class="cart__card cart__hide" id="hoodies">
+                <div class="cart__box">
+                    <img src="https://i.imgur.com/Yuus6Y2.png" alt="Hoodies" class="cart__img">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__title">Hoodies</h3>
+                    <span class="cart__stock">Stock: 10 | <span class="cart__price">$14.00</span></span>
+                    <span class="cart__subtotal subtotalHoodies">
+                        Subtotal: $0.00
+                    </span>
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box minus cartRemoveHoodie" data-id="1">
+                                <i class="bx bx-minus"></i>
+                            </span>
+
+                            <span class="cart__amount-number unitsHoodies">0 units</span>
+
+                            <span class="cart__amount-box plus cartAddHoodie" data-id="1">
+                                <i class="bx bx-plus "></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash trashHoodie" data-id="1"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card cart__hide" id="shirts">
+                <div class="cart__box"><img class="cart__img" src="https://i.imgur.com/rSnza7F.png" alt="Shirts">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__titles">Shirts</h3>
+                    <span class="cart__stock">Stock: 14 | <span class="cart__price">$24.00</span></span>
+                    <span class="cart__subtotal subtotalShirts">Subtotal: $0.00</span>
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box cartRemoveShirt">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="unitsShirts">0 units</span>
+                            <span class="cart__amount-box cartAddShirt">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+                        <i class="bx bx-trash-alt cart__amount-trash trashShirt"></i>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="cart__card cart__hide" id="sweatshirts">
+                <div class="cart__box"><img class="cart__img" src="https://i.imgur.com/FiAi9jD.png" alt="Sweatshirts">
+                </div>
+                <div class="cart__details">
+                    <h3 class="cart__titles">Sweatshirts</h3>
+                    <span class="cart__stock">Stock: 19 | <span class="cart__price">$24.00</span></span>
+                    <span class="cart__subtotal subtotalSweatshirts">Subtotal: $0.00</span>
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box cartRemoveSweatshirt">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="unitsSweatshirts">0 units</span>
+                            <span class="cart__amount-box cartAddSweatshirt">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+                        <i class="bx bx-trash-alt cart__amount-trash trashSweatshirt"></i>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__prices-item">
+                <span id="items-count" class="countCart">0</span> items</span>
+            <span class="cart__prices-total cartTotalPrice" id="cart-total">$0.00</span>
+        </div>
+        <div class="cart__checkout">
+            <button class="button cart__btn" id="cart-checkout" disabled="disabled"><i class="bx bxs-check-shield"></i>
+                Checkout</button>
+        </div>
+    </div>
+    <main>
+
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__img-bg">
+                    <img src="https://i.imgur.com/O2J6jHX.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">New Sweatshirt <br> COLLECTIONS 2022</h1>
+                    <p class="home__description">
+                        Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022
+                        series,
+                        with a modern
+                        design.
+                    </p>
+                    <span class="home__price price">$14.00</span>
+
+                    <div class="home__btns">
+                        <a href="#footer" class="button button--gray button__small">
+                            Contact
+                        </a>
+                        <form action="#products">
+                            <button class="button home__button">DISCOVER PRODUCTS </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <div class="products__container ">
+                <ul>
+                    <li class="products__item products__line mixitup-control-active" data-filter="all">
+                        <h3 class="products__title">
+                            Products:
+                        </h3>
+                    </li>
+                </ul>
+
+                <div class="products__content grid " id="products__content">
+                    <article class="products__card hoodies">
+                        <div class="products__shape">
+                            <img src="https://i.imgur.com/Yuus6Y2.png" alt="Hoodies" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">$14.00 <span class="products__quantity quantity">| Stock:
+                                    10</span></h2>
+                            <h3 class="products__name">Hoodies</h3>
+
+                            <button class="button products__button addHoodie" data-id="1">
+                                <i class="bx bx-plus"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card shirts">
+                        <div class="products__shape">
+                            <img src="https://i.imgur.com/rSnza7F.png" alt="Shirts" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">$24.00 <span class="products__quantity">| Stock:
+                                    15</span></h2>
+                            <h3 class="products__name">Shirts</h3>
+
+                            <button class="button products__button addShirt" data-id="2">
+                                <i class="bx bx-plus"></i>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="products__card sweatshirts">
+                        <div class="products__shape">
+                            <img src="https://i.imgur.com/FiAi9jD.png" alt="Sweatshirts" class="products__img">
+                        </div>
+
+                        <div class="products__data">
+                            <h2 class="products__price">$24.00 <span class="products__quantity">| Stock:
+                                    20</span></h2>
+                            <h3 class="products__name">Sweatshirts</h3>
+
+                            <button class="button products__button addSweatshirt" data-id="3">
+                                <i class="bx bx-plus"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>Chihuahua - México</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copy Right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Hoodies</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Shirts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Sweatshirts</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">Made by Jesus Jose Martha Laborin for © ACADEMLO. All rigths reserved</span>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
